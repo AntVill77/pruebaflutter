@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pueba1/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,18 +10,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Text("hola mundo"),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {}, child: Icon(Icons.access_time_sharp)),
     );
   }
 }

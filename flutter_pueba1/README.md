@@ -1,4 +1,5 @@
-# flutter_pueba1
+# flutter_prueba1
+# Curso de pruebas de flutter
 
 A new Flutter project.
 
