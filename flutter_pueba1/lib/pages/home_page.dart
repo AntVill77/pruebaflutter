@@ -1,34 +1,33 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.black38,
-      appBar: AppBar(
-        title: Text("My Home Page"),
-      ),
-      drawer: Drawer(
-        child: Text("drawer content"),
-      ),
-      drawerDragStartBehavior: DragStartBehavior.down,
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.access_alarm), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.chat_bubble_outline), label: "Chat"),
-        ],
-      ),
       body: Center(
-        child: Text("hola Mundo"),
+        // color: Colors.black26,
+        child: Text(
+          " ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          textAlign: TextAlign.justify,
+          overflow: TextOverflow.fade,
+          softWrap: false,
+          style: TextStyle(
+              // fontSize: 18 + 9.0,
+              color: Colors.black,
+              fontWeight: FontWeight.w400,
+              letterSpacing: .5,
+              decoration: TextDecoration.none,
+              height: 2,
+              shadows: [
+                Shadow(
+                  color: Colors.black45,
+                  offset: Offset(2, 2),
+                  blurRadius: 2,
+                ),
+              ]),
+          // textScaleFactor: 1,
+        ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
