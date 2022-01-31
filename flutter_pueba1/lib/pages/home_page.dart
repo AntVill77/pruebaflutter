@@ -5,29 +5,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        // color: Colors.black26,
-        child: Text(
-          " ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          textAlign: TextAlign.justify,
-          overflow: TextOverflow.fade,
-          softWrap: false,
-          style: TextStyle(
-              // fontSize: 18 + 9.0,
-              color: Colors.black,
-              fontWeight: FontWeight.w400,
-              letterSpacing: .5,
-              decoration: TextDecoration.none,
-              height: 2,
-              shadows: [
-                Shadow(
-                  color: Colors.black45,
-                  offset: Offset(2, 2),
-                  blurRadius: 2,
-                ),
-              ]),
-          // textScaleFactor: 1,
+          child: Container(
+        color: Colors.grey.withOpacity(0.4),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 80,
+              height: 40,
+              color: Colors.red,
+            ),
+            Container(
+              width: 40,
+              height: 80,
+              color: Colors.blue,
+            )
+          ],
         ),
-      ),
+      )),
     );
   }
 }
