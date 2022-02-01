@@ -9,12 +9,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: IconButton(
-          onPressed: this.onPressed,
-          icon: Icon(Icons.calendar_today),
-          color: Colors.blue,
-        ),
-      ),
+          child: RaisedButton(
+        onPressed: this.onPressed,
+        color: Colors.blue,
+        child: Text("RaisedButton"),
+      )),
     );
   }
 }
