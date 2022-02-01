@@ -1,32 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_emoji/flutter_emoji.dart';
 
 class HomePage extends StatelessWidget {
+  void onPressed(String text) {
+    print("boton presionado");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.grey,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red,
-          ),
-          Container(
-            width: 60,
-            height: 60,
-            color: Colors.blue,
-          ),
-          Text(
-            "hello",
-          ),
-        ],
+      body: Center(
+        child: FlatButton(
+            onPressed: () => this.onPressed("hola"),
+            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            child: Text(
+              "Press me",
+              style: TextStyle(color: Colors.white),
+            ),
+            color: Colors.blue),
       ),
-    ));
+    );
   }
 }
