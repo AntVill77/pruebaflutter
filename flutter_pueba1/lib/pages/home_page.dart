@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_emoji/flutter_emoji.dart';
 
 class HomePage extends StatelessWidget {
-  void onPressed(String text) {
+  void onPressed() {
     print("boton presionado");
   }
 
@@ -10,14 +9,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: FlatButton(
-            onPressed: () => this.onPressed("hola"),
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-            child: Text(
-              "Press me",
-              style: TextStyle(color: Colors.white),
-            ),
-            color: Colors.blue),
+        child: IconButton(
+          onPressed: this.onPressed,
+          icon: Icon(Icons.calendar_today),
+          color: Colors.blue,
+        ),
       ),
     );
   }
