@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pueba1/pages/widgets/images_example.dart';
 import './widgets/my_bottom_navigation_bar.dart';
@@ -28,7 +29,21 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //bottomNavigationBar: MyBottomNavigationBar(),
-      body: SafeArea(child: ImagesExample()),
+      body: SafeArea(
+        child: ListView.builder(
+          itemBuilder: (_, int index) {
+            return CachedNetworkImage(
+              imageUrl:
+                  "https://cdn.pixabay.com/photo/2022/01/25/19/13/nature-6967075_960_720.jpg",
+              placeholder: (_, __) => Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
+          },
+          itemCount: 1000,
+          itemExtent: 300,
+        ),
+      ),
     );
   }
 }
