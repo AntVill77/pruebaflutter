@@ -1,18 +1,34 @@
-import 'package:flutter/material.dart';
-import './widgets/my_bottom_navigation_bar.dart';
-import './widgets/my_counter.dart';
-//import 'package:flutter/cupertino.dart';
+import 'dart:ffi';
 
-class HomePage extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:flutter_pueba1/pages/widgets/images_example.dart';
+import './widgets/my_bottom_navigation_bar.dart';
+
+class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Color color;
+  List<Color> colors = [
+    Colors.red,
+    Colors.black,
+    Colors.blue,
+  ];
+
+  @override
+  Void initState() {
+    super.initState();
+    this.color = this.colors[0];
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       bottomNavigationBar: MyBottomNavigationBar(),
-      body: Center(
-        child: MyCounter(),
-      ),
+      body: ImagesExample(),
     );
   }
 }
