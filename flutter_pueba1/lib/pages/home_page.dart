@@ -27,8 +27,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: MyBottomNavigationBar(),
-      body: ImagesExample(),
+      //bottomNavigationBar: MyBottomNavigationBar(),
+      body: SafeArea(child: ImagesExample()),
     );
   }
 }
