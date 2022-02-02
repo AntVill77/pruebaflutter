@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import './widgets/my_bottom_navigation_bar.dart';
+import './widgets/my_counter.dart';
+//import 'package:flutter/cupertino.dart';
 
 class HomePage extends StatelessWidget {
-  void onPressed() {
-    print("boton presionado");
-  }
+  const HomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      bottomNavigationBar: MyBottomNavigationBar(),
       body: Center(
-          child: CupertinoButton(
-        onPressed: this.onPressed,
-        color: Colors.redAccent,
-        borderRadius: BorderRadius.circular(30),
-        padding: EdgeInsets.symmetric(horizontal: 25),
-        minSize: 50,
-        child: Text("RaisedButton"),
-      )),
+        child: MyCounter(),
+      ),
     );
   }
 }
